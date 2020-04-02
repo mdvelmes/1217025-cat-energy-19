@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Пряхин](https://up.htmlacademy.ru/adaptive/19/user/1217025).
-* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
+
 
 ---
 
