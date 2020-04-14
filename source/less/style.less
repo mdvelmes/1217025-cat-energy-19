@@ -1,94 +1,33 @@
-body {
-  font-family: 'Oswald', sans-serif;
-  width: 320px;
-  margin:0;
-  padding: 0;
-  margin: 0 auto;
+@import "node_modules/normalize.less/normalize.less";
+@import "global.less";
+@import "variables.less";
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 400;
+  src:  url('../fonts/oswaldregular.woff2') format('woff2'),
+        url('../fonts/oswaldregular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 500;
+  src:  url('../fonts/oswaldmedium.woff2') format('woff2'),
+        url('../fonts/oswaldmedium.woff') format('woff');
 }
 
 @import "visually-hidden.less";
-
-@import "button.less";
-
-@import "page-header.less";
-
-@import "page-header__logo.less";
-
-@import "main-nav__list.less";
-
-@import "main-nav__item.less";
-
-@import "main-nav__item-link.less";
-
-@import "introduction.less";
-
-@import "introduction__header.less";
-
-@import "introduction__slogan.less";
-
-@import "categoties__list.less";
-
-@import "categoties__item.less";
-
-@import "categoties__title.less";
-
-@import "categoties__description.less";
-
-@import "categoties__link.less";
-
-@import "advantages__title.less";
-
-@import "advatgages__list.less";
-
-@import "advantages__description.less";
-
-@import "example.less";
-
-@import "example__title.less";
-
-@import "example__description.less";
-
-@import "example__value.less";
-
-@import "example__value-text.less";
-
-@import "example__costs.less";
-
-@import "contacts__suggestion.less";
-
-@import "contacts__adress.less";
-
-@import "contacts__map.less";
-
-@import "contacts__map-img.less";
-
-@import  "page-footer.less";
-
-@import "page-footer__logo-link.less";
-
-@import "social__list.less";
-
-@import "social__link.less";
-
-@import "copyright__text.less";
-
-@import "copyright__link.less";
-
-/* Дальше для каталога*/
-
-@import "catalog__title.less";
-
-@import "catalog__list.less";
-
-@import "catalog__name.less";
-
-@import "catalog__name-link.less";
-
-@import "catalog__table.less";
-
-@import "catalog__show-more-name.less";
-
-@import "catalog__description.less";
+@import "blocks/button.less";
+@import "blocks/page-header.less";
+@import "blocks/main-nav.less";
+@import "blocks/introduction.less";
+@import "blocks/categories.less";
+@import "blocks/advantages.less";
+@import "blocks/example.less";
+@import "blocks/contacts.less";
+@import  "blocks/page-footer.less";
+@import  "blocks/social.less";
+@import  "blocks/catalog.less";
 
 
 
