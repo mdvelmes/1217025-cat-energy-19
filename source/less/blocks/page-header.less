@@ -2,7 +2,8 @@
   background-color: @white;
   padding-left: 20px;
   padding-right: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__logo:hover,
@@ -12,4 +13,10 @@
 
 .page-header__logo:active {
   opacity: 0.6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+  }
 }
