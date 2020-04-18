@@ -1,7 +1,5 @@
 .page-header {
   background-color: @white;
-  padding-left: 20px;
-  padding-right: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -18,5 +16,12 @@
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding: 0 40px;
+    justify-content: space-between;
   }
 }

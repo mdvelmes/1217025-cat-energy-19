@@ -4,6 +4,13 @@
   padding-right: 20px;
   width: 320px;
   text-align: center;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .page-footer__logo-link:hover,
@@ -13,4 +20,16 @@
 
 .page-footer__logo-link:active {
   opacity: 0.6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: auto;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }

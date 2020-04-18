@@ -5,6 +5,7 @@
 .advantages__title {
   font-size: 36px;
   line-height: 60px;
+  font-weight: 400;
 }
 
 .advatgages__list {
@@ -18,4 +19,44 @@
 .advantages__description {
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .advatgages__list  {
+    width: 708px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 200px;
+    margin-right: 150px;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advatgages__list  {
+    width: 1260px;
+    flex-wrap: nowrap;
+  }
+
+  .advantages__item {
+    width: 250px;
+    margin-right: 80px;
+  }
 }

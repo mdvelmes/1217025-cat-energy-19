@@ -1,11 +1,13 @@
 .example {
   background-color: @bg-gray;
   width: 320px;
+  padding-bottom: 40px;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 60px;
+  font-weight: 400;
 }
 
 .example__description {
@@ -27,4 +29,42 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: auto;
+    padding-bottom: 70px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    width: 708px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__wrapper {
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__block {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__description {
+    width: 450px;
+  }
+  .example__wrapper {
+    width: 400px;
+    flex-wrap: wrap;
+  }
 }
