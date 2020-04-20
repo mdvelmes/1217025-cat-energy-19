@@ -1,5 +1,10 @@
 .contacts {
+  width: 100%;
+}
+
+.contacts__wrapper {
   position: relative;
+  padding: 30px 20px;
 }
 
 .contacts__info {
@@ -12,12 +17,14 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  margin: 0;
 }
 
 .contacts__adress {
   width: 140px;
   font-size: 14px;
   line-height: 20px;
+  margin: 0;
 }
 
 .contacts__map {
@@ -30,9 +37,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    padding: 60px 70px;
+  }
+
   .contacts__info {
     justify-content: space-between;
-    padding: 0 40px;
   }
 
   .contacts__suggestion {
@@ -58,6 +68,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    padding: 0;
+  }
+
   .contacts__map {
     background: url("../img/bg-map-desktop@1x.png") no-repeat;
   }

@@ -1,16 +1,23 @@
 .example {
   background-color: @bg-gray;
-  width: 320px;
-  padding-bottom: 40px;
+  width: 100%;
+}
+
+.example__wrapper {
+  padding: 0 20px;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+
 }
 
 .example__description {
+  width: 280px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -33,8 +40,11 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: auto;
-    padding-bottom: 70px;
+    background-color: @white;
+
+  }
+  .example__wrapper {
+    padding: 0 30px;
   }
 
   .example__title {
@@ -48,7 +58,7 @@
     line-height: 24px;
   }
 
-  .example__wrapper {
+  .example__block-wrapper {
     width: 708px;
     display: flex;
     justify-content: space-between;
@@ -60,10 +70,18 @@
 }
 
 @media (min-width: @desktop-width) {
+  .example {
+    background-color: @bg-gray;
+  }
+
+  .example__wrapper {
+    padding: 0 110px;
+  }
+
   .example__description {
     width: 450px;
   }
-  .example__wrapper {
+  .example__block-wrapper {
     width: 400px;
     flex-wrap: wrap;
   }
