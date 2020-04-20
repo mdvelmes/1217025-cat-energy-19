@@ -377,6 +377,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 .page-header__logo:hover,
 .page-header__logo:focus {
@@ -400,8 +401,8 @@ input[type="radio"].visually-hidden {
   }
 }
 .main-nav {
-  width: 280px;
   text-align: center;
+  margin: 0 auto;
 }
 .main-nav__list {
   list-style: none;
@@ -456,7 +457,7 @@ input[type="radio"].visually-hidden {
 }
 .introduction {
   width: 100%;
-  background: #ffffff url("../img/index-background-mobile@1x.jpg") no-repeat top left;
+  background: #ffffff url("../img/index-background-mobile@1x.jpg") no-repeat top center;
 }
 .introduction__wrapper {
   padding: 0 20px;
@@ -476,6 +477,7 @@ input[type="radio"].visually-hidden {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 auto 20px;
 }
 .introduction__tagline {
   color: #ffffff;
@@ -483,9 +485,14 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  margin: 0 auto 20px;
 }
 .introduction__img {
   width: 280px;
+  margin: 0 auto;
+}
+.introduction__button {
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .introduction {
@@ -502,6 +509,7 @@ input[type="radio"].visually-hidden {
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
+    margin-left: 0;
   }
   .introduction__tagline {
     width: 295px;
@@ -509,6 +517,7 @@ input[type="radio"].visually-hidden {
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
+    margin-left: 0;
   }
   .introduction__img {
     display: none;
@@ -517,6 +526,7 @@ input[type="radio"].visually-hidden {
     width: 245px;
     z-index: 2;
     margin-bottom: 550px;
+    margin-left: 0;
   }
 }
 @media (min-width: 1300px) {
@@ -550,7 +560,6 @@ input[type="radio"].visually-hidden {
   background-color: #f2f2f2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 280px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 40px;
@@ -582,7 +591,6 @@ input[type="radio"].visually-hidden {
     padding: 0 30px;
   }
   .categoties__item {
-    width: 708px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 80px;
@@ -594,7 +602,6 @@ input[type="radio"].visually-hidden {
     line-height: 37px;
   }
   .categoties__description {
-    width: 380px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -610,7 +617,6 @@ input[type="radio"].visually-hidden {
             flex-direction: row;
   }
   .categoties__item {
-    width: 570px;
     margin-right: 80px;
   }
   .categoties__item:last-child {
@@ -643,9 +649,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
 }
-.advantages__item {
-  width: 200px;
-}
 .advantages__description {
   font-size: 14px;
   line-height: 18px;
@@ -661,9 +664,9 @@ input[type="radio"].visually-hidden {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .advantages__item {
-    margin-right: 150px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .advantages__title {
     font-size: 60px;
@@ -683,8 +686,10 @@ input[type="radio"].visually-hidden {
         flex-wrap: nowrap;
   }
   .advantages__item {
-    width: 250px;
-    margin-right: 80px;
+    width: 245px;
+  }
+  .advantages__item:last-child {
+    margin-right: 0;
   }
 }
 .example {
@@ -702,7 +707,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 .example__description {
-  width: 280px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -731,12 +735,10 @@ input[type="radio"].visually-hidden {
     line-height: 60px;
   }
   .example__description {
-    width: 708px;
     font-size: 16px;
     line-height: 24px;
   }
   .example__block-wrapper {
-    width: 708px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -757,11 +759,7 @@ input[type="radio"].visually-hidden {
   .example__wrapper {
     padding: 0 110px;
   }
-  .example__description {
-    width: 450px;
-  }
   .example__block-wrapper {
-    width: 400px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -779,7 +777,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 .contacts__suggestion {
-  width: 140px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -787,14 +784,13 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 .contacts__adress {
-  width: 140px;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
 }
 .contacts__map {
   height: 362px;
-  background: url("../img/bg-map-mobile@1x.png") no-repeat;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
 }
 .contacts__map-img {
   -webkit-transform: translate(100px, 120px);
@@ -810,18 +806,16 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
   }
   .contacts__suggestion {
-    width: 165px;
     font-size: 20px;
     line-height: 25px;
   }
   .contacts__adress {
-    width: 180px;
     font-size: 16px;
     line-height: 20px;
   }
   .contacts__map {
     height: 400px;
-    background: url("../img/bg-map-tablet@1x.png") no-repeat;
+    background: url("../img/bg-map-tablet@1x.png") no-repeat center;
   }
   .contacts__map-img {
     -webkit-transform: translate(320px, 150px);
@@ -833,7 +827,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
   }
   .contacts__map {
-    background: url("../img/bg-map-desktop@1x.png") no-repeat;
+    background: url("../img/bg-map-desktop@1x.png") no-repeat center;
   }
   .contacts__info {
     position: absolute;
@@ -849,8 +843,8 @@ input[type="radio"].visually-hidden {
     padding-bottom: 70px;
   }
   .contacts__map-img {
-    -webkit-transform: translate(1000px, 150px);
-            transform: translate(1000px, 150px);
+    -webkit-transform: translate(1100px, 150px);
+            transform: translate(1100px, 150px);
   }
 }
 .page-footer {
@@ -913,7 +907,7 @@ input[type="radio"].visually-hidden {
 .social__item {
   width: 30px;
   height: 30px;
-  margin: 0 10px;
+  margin: 0 auto;
 }
 .social__link:hover svg,
 .social__link:focus svg {
