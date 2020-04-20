@@ -23,10 +23,6 @@
   margin: 0;
 }
 
-.advantages__item {
-  width: 200px;
-}
-
 .advantages__description {
   font-size: 14px;
   line-height: 18px;
@@ -40,10 +36,7 @@
   .advatgages__list  {
     flex-wrap: wrap;
     flex-direction: row;
-  }
-
-  .advantages__item {
-    margin-right: 150px;
+    justify-content: space-between;
   }
 
   .advantages__title {
@@ -67,7 +60,10 @@
   }
 
   .advantages__item {
-    width: 250px;
-    margin-right: 80px;
+    width: 245px;
+  }
+
+  .advantages__item:last-child {
+    margin-right: 0;
   }
 }
