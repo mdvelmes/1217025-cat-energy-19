@@ -1,5 +1,14 @@
 .social__list {
   list-style: none;
+  margin: 0;
+  padding:  25px 75px;
+  display: flex;
+}
+
+.social__item {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
 }
 
 .social__link:hover svg,
@@ -9,4 +18,16 @@
 
 .social__link:active svg {
   fill: @pale-green;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    padding: 0;
+  }
+  .social__item {
+    margin-right: 20px;
+  }
+  .social__item:last-child {
+    margin-right: 0;
+  }
 }

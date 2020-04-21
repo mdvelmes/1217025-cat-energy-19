@@ -1,8 +1,16 @@
 .page-header {
+  width: 100%;
   background-color: @white;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+.page-header__wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .page-header__logo:hover,
@@ -12,4 +20,19 @@
 
 .page-header__logo:active {
   opacity: 0.6;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    padding: 0 30px;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    padding: 0 40px;
+    width: 1300px;
+  }
 }
