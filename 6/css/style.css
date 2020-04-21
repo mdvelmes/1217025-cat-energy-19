@@ -397,7 +397,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .page-header__wrapper {
-    padding: 0 50px;
+    padding: 0 40px;
   }
 }
 .main-nav {
@@ -499,8 +499,7 @@ input[type="radio"].visually-hidden {
     background: #ffffff url("../img/index-can-tablet@1x.jpg") no-repeat bottom center;
   }
   .introduction__wrapper {
-    padding-left: 120px;
-    padding-right: 30px;
+    padding: 0 30px;
     text-align: left;
   }
   .introduction__header {
@@ -532,6 +531,10 @@ input[type="radio"].visually-hidden {
 @media (min-width: 1300px) {
   .introduction {
     background: #ffffff url("../img/index-can-desktop@1x.png") no-repeat 70% 0%;
+  }
+  .introduction__wrapper {
+    padding: 0 40px;
+    text-align: left;
   }
   .introduction__button {
     margin-bottom: 250px;
@@ -608,7 +611,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .categoties__wrapper {
-    padding: 0 110px;
+    padding: 0 40px;
   }
   .categoties__list {
     -webkit-box-orient: horizontal;
@@ -679,7 +682,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .advantages__wrapper {
-    padding: 0 110px;
+    padding: 0 40px;
   }
   .advatgages__list {
     -ms-flex-wrap: nowrap;
@@ -757,7 +760,7 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
   }
   .example__wrapper {
-    padding: 0 110px;
+    padding: 0 40px;
   }
   .example__block-wrapper {
     -ms-flex-wrap: wrap;
@@ -798,7 +801,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 768px) {
   .contacts__wrapper {
-    padding: 60px 70px;
+    padding: 60px 30px;
   }
   .contacts__info {
     -webkit-box-pack: justify;
@@ -824,7 +827,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .contacts__wrapper {
-    padding: 0;
+    padding: 0 40px;
   }
   .contacts__map {
     background: url("../img/bg-map-desktop@1x.png") no-repeat center;
@@ -892,8 +895,8 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .page-footer__wrapper {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .social__list {
@@ -960,6 +963,7 @@ input[type="radio"].visually-hidden {
   line-height: 60px;
   font-weight: 400;
   margin: 30px 0;
+  text-align: center;
 }
 .catalog__list {
   list-style: none;
@@ -974,9 +978,9 @@ input[type="radio"].visually-hidden {
           flex-direction: column;
 }
 .catalog__item {
-  width: 280px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: center;
 }
 .catalog__name {
   color: #000000;
@@ -993,6 +997,7 @@ input[type="radio"].visually-hidden {
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  text-align: center;
 }
 .catalog__table {
   font-size: 12px;
@@ -1003,10 +1008,20 @@ input[type="radio"].visually-hidden {
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  text-align: center;
 }
 .catalog__description {
   font-size: 12px;
   line-height: 16px;
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+}
+.catalog__order {
+  margin: 0 auto;
+}
+.catalog__show-all {
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .catalog__title {
@@ -1055,6 +1070,7 @@ input[type="radio"].visually-hidden {
   }
   .catalog__description {
     font-size: 16px;
+    width: 245px;
   }
   .catalog__show-all {
     margin-top: 270px;
@@ -1063,7 +1079,7 @@ input[type="radio"].visually-hidden {
 }
 @media (min-width: 1300px) {
   .catalog__wrapper {
-    padding: 0 110px;
+    padding: 0 40px;
   }
   .catalog__item {
     background-color: #f2f2f2;
