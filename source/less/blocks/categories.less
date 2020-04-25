@@ -25,6 +25,31 @@
   padding-right: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  position: relative;
+
+  &--slim::before {
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 40px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+    z-index: 2;
+  }
+
+  &--gain::before {
+    content: "";
+
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    width: 70px;
+    height: 30px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+    z-index: 2;
+  }
 }
 
 .categoties__title {

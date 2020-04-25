@@ -18,6 +18,18 @@
 .page-footer__logo-link {
   margin-top: 55px;
   margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background: @mobile-categories-lines;
+  }
 }
 
 .page-footer__logo-link:hover,
