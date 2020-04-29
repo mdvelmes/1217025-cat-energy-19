@@ -21,26 +21,113 @@
 }
 
 .example__description {
-  margin :0;
+  margin: 0;
   font-size: 14px;
   line-height: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.example__block {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 34px;
+}
+
 .example__value {
   font-size: 24px;
   line-height: 24px;
+  box-sizing: border-box;
+  width: 125px;
+  border: @mobile-example-border solid 1px;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 15px;
+
+  &--weight {
+    margin-right: 32px;
+  }
 }
 
 .example__value-text {
   font-size: 12px;
   line-height: 12px;
+  position: absolute;
+  margin: 0;
+  width: 88px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 2;
+  background-color: @bg-gray;
+  top: 43px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &--weight {
+    left: 18px;
+  }
+
+  &--period {
+    left: 173px;
+  }
 }
 
 .example__costs {
+  margin-left: 48px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
+}
+
+.example__img-before {
+  background: url("../img/after-mobile@1x.png") no-repeat top center;
+}
+
+.example__slider {
+  text-align: center;
+}
+
+.example__before-text,
+.example__after-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__checkbox[type="checkbox"] {
+  display: none;
+}
+
+.example__checkbox[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  width: 85px;
+  height: 11px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  margin-left: 16px;
+  margin-right: 14px;
+}
+
+.example__checkbox[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #519b00;
+  position: absolute;
+  top: 3px;
+  right: 42px;
+  transition: all 0.3s ease-out;
+}
+
+.example__checkbox[type="checkbox"]:checked + label::before {
+  right: 5px;
 }
 
 @media (min-width: @tablet-width) {

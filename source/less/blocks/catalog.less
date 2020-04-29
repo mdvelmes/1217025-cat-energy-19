@@ -10,11 +10,33 @@
 }
 
 .catalog__title {
+  position: relative;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
   margin: 30px 0;
-  text-align: center;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background: @mobile-menu-lines;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background: @mobile-menu-lines;
+    z-index: 3;
+  }
 }
 
 .catalog__list {
@@ -26,12 +48,31 @@
 }
 
 .catalog__item {
+  position: relative;
   box-sizing: border-box;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background: @mobile-menu-lines;
+    z-index: 3;
+  }
 }
 
 .catalog__name {
+  margin: 0;
+  width: 75px;
   color: @black;
+  text-align: left;
   text-decoration: none;
   font-size: 16px;
   line-height: 20px;
@@ -39,7 +80,15 @@
   font-weight: 400;
 }
 
+.catalog__link-img {
+  margin-top: -63px;
+}
+
 .catalog__name-link {
+  margin-left: 139px;
+  margin-top: 20px;
+  width: 150px;
+  z-index: 2;
   color: @black;
   text-decoration: none;
   font-size: 16px;
@@ -50,11 +99,51 @@
 }
 
 .catalog__table {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 16px;
+  position: relative;
+}
+
+.catalog__feature {
+  text-align: left;
+}
+
+.catalog__value {
+  margin: 0;
+  position: absolute;
+  text-align: right;
+  left: 101px;
+
+  &--weight {
+    width: 40px;
+    top: -1px;
+  }
+
+  &--type {
+    width: 40px;
+    top: 14px;
+  }
+
+  &--prize {
+    width: 40px;
+    top: 30px;
+  }
+}
+
+.catalog__show-more {
+  position: relative;
+}
+
+.catalog__show-more svg {
+  position: absolute;
+  top: 27px;
+  left: 125px;
 }
 
 .catalog__show-more-name {
+  margin-top: 80px;
+  margin-bottom: 7px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -66,16 +155,24 @@
   font-size: 12px;
   line-height: 16px;
   display: block;
-  margin: 0 auto;
-  width: 180px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 22px;
 }
 
 .catalog__order {
   margin: 0 auto;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .catalog__show-all {
-  margin: 0 auto;
+  margin: 0 auto 25px;
+  background-color: @bg-gray;
+  color: @black;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: @tablet-width) {
