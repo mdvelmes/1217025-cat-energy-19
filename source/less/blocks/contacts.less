@@ -10,9 +10,8 @@
   margin: 0 auto;
   background-color: @bg-gray;
 
-  &--invetred {
+  &--inverted {
     background-color: @white;
-    padding-bottom: 15px;
   }
 }
 
@@ -27,14 +26,14 @@
   text-transform: uppercase;
   font-weight: 400;
   display: block;
-  width: 140px;
+  width: 143px;
   box-sizing: border-box;
-  padding-right: 30px;
   margin-top: 30px;
   margin-bottom: 25px;
 }
 
 .contacts__adress {
+  width: 140px;
   font-size: 14px;
   line-height: 20px;
   margin-top: 30px;
@@ -43,12 +42,13 @@
 }
 
 .contacts__map {
-  height: 362px;
-  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+  min-height: 365px;
 }
 
-.contacts__map-img {
-  transform: translate(100px, 120px);
+.contact__map-mark {
+  position: absolute;
+  top: 210px;
+  right: 100px;
 }
 
 @media (min-width: @tablet-width) {

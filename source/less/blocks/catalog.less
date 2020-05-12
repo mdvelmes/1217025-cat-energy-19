@@ -169,12 +169,22 @@
   line-height: 20px;
 }
 
-.catalog__show-all {
+.catalog__show-more .catalog__show-all {
   margin: 0 auto 25px;
   background-color: @bg-gray;
   color: @black;
   font-size: 16px;
   line-height: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-gray-button;
+  }
+
+  &:active {
+    color: @black;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

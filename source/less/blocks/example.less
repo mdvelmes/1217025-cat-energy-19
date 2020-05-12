@@ -4,7 +4,7 @@
 }
 
 .example__wrapper {
-  padding: 15px 20px;
+  padding: 15px 20px 35px;
   width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -25,6 +25,10 @@
   font-size: 14px;
   line-height: 18px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.example__block-wrapper {
+  margin-bottom: 40px;
 }
 
 .example__block {
@@ -84,12 +88,24 @@
   line-height: 20px;
 }
 
-.example__img-before {
-  background: url("../img/after-mobile@1x.png") no-repeat top center;
+.example__picture {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    width: 320px;
+    height: 240px;
+    background: url("../img/after-mobile@1x.png") no-repeat top center @bg-gray;
+  }
 }
 
 .example__slider {
   text-align: center;
+  margin-top: 54px;
 }
 
 .example__before-text,
@@ -97,6 +113,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin-left: 10px;
 }
 
 .example__checkbox[type="checkbox"] {
@@ -113,7 +130,7 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease-out;
-  margin-left: 16px;
+  margin-left: 12px;
   margin-right: 14px;
 }
 
@@ -125,7 +142,7 @@
   border-radius: 10px;
   background-color: #519b00;
   position: absolute;
-  top: 3px;
+  top: 2px;
   right: 42px;
   transition: all 0.3s ease-out;
 }

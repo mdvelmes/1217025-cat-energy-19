@@ -1,0 +1,96 @@
+.owner-info {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 29px;
+}
+
+.owner-info__title {
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
+  width: 185px;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    right: -116px;
+    width: 99px;
+    height: 3px;
+    background: @bg-green;
+  }
+}
+
+.owner-info__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.owner-info__item {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.owner-info__item input {
+  border: 1px solid @mobile-menu-lines;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding-left: 13px;
+  padding-right: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  outline: none;
+
+  &:hover {
+    border-color: @mobile-extra-goods-border;
+  }
+
+  &:focus {
+    border: 2px solid @input-active-color;
+  }
+
+  &:invalid {
+    border-color: @input-error-color;
+  }
+}
+
+.owner-info__email {
+  margin-left: 8px;
+  width: 217px;
+}
+
+.owner-info__email-icon {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.owner-info__tel {
+  margin-left: 7px;
+  width: 202px;
+}
+
+.owner-info__tel-icon {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
