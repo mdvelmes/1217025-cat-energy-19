@@ -21,6 +21,7 @@
 }
 
 .example__description {
+  width: 266px;
   margin: 0;
   font-size: 14px;
   line-height: 18px;
@@ -164,11 +165,14 @@
   .example__title {
     font-size: 60px;
     line-height: 60px;
+    margin-left: 2px;
+    margin-bottom: 62px;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
+    width: 676px;
   }
 
   .example__block-wrapper {
@@ -177,7 +181,61 @@
   }
 
   .example__block {
+    margin-top: 53px;
     display: flex;
+  }
+
+  .example__value {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+    border: @mobile-example-border solid 1px;
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-bottom: 18px;
+
+    &--weight {
+      margin-right: 42px;
+    }
+  }
+
+  .example__value-text {
+    font-size: 14px;
+    line-height: 14px;
+    position: absolute;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: @white;
+    top: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &--weight {
+      left: 23px;
+      width: 115px
+    }
+
+    &--period {
+      left: 216px;
+      width: 141px;
+    }
+
+    & span {
+      margin-left: 4px;
+    }
+  }
+
+  .example__costs {
+    width: 180px;
+    margin-left: 48px;
+    margin-top: 60px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
   }
 }
 

@@ -2,9 +2,20 @@
   position: relative;
   margin: 0;
   padding: 0;
-  border: 1px solid @mobile-form-lines;
-  width: 100%; //вопрос
+  border: none;
   margin-bottom: 30px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 320px;
+    min-height: 158px;
+    background-color: transparent;
+    border: 1px solid @mobile-form-lines;
+  }
 }
 
 .program-type__list {

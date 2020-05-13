@@ -35,11 +35,34 @@
 @media (min-width: @tablet-width) {
   .social__list {
     padding: 0;
+
+    &::after {
+      display: none;
+    }
   }
+
   .social__item {
     margin-right: 20px;
   }
+
   .social__item:last-child {
-    margin-right: 0;
+    margin-right: -5px;
+  }
+
+  .social__link {
+    &--vkontakte svg {
+      width: 30px;
+      height: 23px;
+    }
+
+    &--instagram svg {
+      width: 30px;
+      height: 23px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

@@ -45,7 +45,7 @@
   min-height: 365px;
 }
 
-.contact__map-mark {
+.contacts__map-mark {
   position: absolute;
   top: 210px;
   right: 100px;
@@ -53,7 +53,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 60px 30px;
+    padding: 60px 30px 0;
     width: 768px;
   }
 
@@ -62,22 +62,40 @@
   }
 
   .contacts__suggestion {
+    padding-left: 42px;
+    width: 196px;
     font-size: 20px;
     line-height: 25px;
+    margin-bottom: 53px;
   }
 
   .contacts__adress {
+    padding-right: 42px;
+    width: 190px;
+    text-align: right;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 53px;
+
+    & span {
+      margin-top: 20px;
+      display: block;
+    }
   }
 
   .contacts__map {
     height: 400px;
     background: url("../img/bg-map-tablet@1x.png") no-repeat center;
+
+    & img {
+      display: none;
+    }
   }
 
-  .contacts__map-img {
-    transform: translate(320px, 150px);
+  .contacts__map-mark {
+    position: absolute;
+    top: 371px;
+    right: 322px;
   }
 }
 
