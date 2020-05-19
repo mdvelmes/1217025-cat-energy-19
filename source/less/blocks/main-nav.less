@@ -173,13 +173,55 @@
         right: 0;
         bottom: 14px;
         left: 0;
-
         height: 2px;
-
         background: @bg-green;
       }
     }
   }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item {
+  font-size: 20px;
+  line-height: 25px;
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        left: 2px;
+        height: 2px;
+        background: @bg-green;
+      }
+    }
+
+    &--inverted {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        left: 2px;
+        height: 2px;
+        background: @white;
+      }
+    }
+  }
+
+  .main-nav__item-link {
+    &--inverted {
+      color: @white;
+    }
+  }
+
 }
 
 

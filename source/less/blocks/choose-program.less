@@ -32,7 +32,7 @@
 }
 
 .choose-program__item input {
-  border: 1px solid @mobile-menu-lines;
+  border: none;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -41,18 +41,15 @@
   padding-right: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
-  outline: none;
+  outline: 1px solid @mobile-menu-lines;
 
   &:hover {
-    border-color: @mobile-extra-goods-border;
+    outline-color: @mobile-extra-goods-border;
   }
 
   &:focus {
-    border: 2px solid @input-active-color;
-  }
-
-  &:invalid {
-    border-color: @input-error-color;
+    border: none;
+    outline: 2px solid @input-active-color;
   }
 }
 
@@ -72,3 +69,90 @@
   width: 171px;
 }
 
+@media (min-width: @tablet-width) {
+  .choose-program__title {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    width: 330px;
+    margin-bottom: 66px;
+    margin-left: 42px;
+  }
+
+  .choose-program__list {
+   padding-left: 43px;
+   padding-right: 36px;
+   margin-bottom: 73px;
+  }
+
+  .choose-program__item {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .choose-program__item input {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 18px;
+    padding-right: 14px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+
+  .choose-program__cat-name-input {
+    width: 565px;
+    margin-left: 12px;
+  }
+
+  .choose-program__cat-weight-input {
+    margin-left: 15px;
+    width: 534px;
+  }
+
+  .choose-program__cat-age-input {
+    margin-left: 13px;
+    width: 495px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .choose-program {
+    width: 607px;
+  }
+
+  .choose-program__title {
+    margin-bottom: 68px;
+    margin-left: 0;
+  }
+
+  .choose-program__list {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 70px;
+  }
+
+  .choose-program__item input {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .choose-program__cat-name-input {
+    width: 505px;
+    margin-left: 14px;
+  }
+
+  .choose-program__cat-weight-input {
+    margin-left: 16px;
+    width: 475px;
+  }
+
+  .choose-program__cat-age-input {
+    margin-left: 14px;
+    width: 436px;
+  }
+}

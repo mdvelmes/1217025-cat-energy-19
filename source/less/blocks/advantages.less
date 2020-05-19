@@ -104,10 +104,16 @@
 
   .advatgages__list  {
     flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 37px;
   }
 
   .advantages__item {
     width: 245px;
+
+    &:nth-child(2n) {
+      padding-left: 0;
+    }
   }
 
   .advantages__item:last-child {

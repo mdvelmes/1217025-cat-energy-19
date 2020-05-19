@@ -26,6 +26,7 @@
 
 .comments__content {
   box-sizing: border-box;
+  border: 1px solid @mobile-menu-lines;
   padding-left: 14px;
   padding-top: 13px;
   padding-right: 3px;
@@ -33,4 +34,94 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+
+  .comments {
+    margin-bottom: 62px;
+  }
+
+  .comments__title {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+    width: 185px;
+    margin-bottom: 77px;
+    margin-left: 41px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background: @bg-green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      right: -516px;
+      width: 480px;
+      height: 3px;
+      background: @bg-green;
+    }
+  }
+
+  .comments__content {
+    box-sizing: border-box;
+    width: 630px;
+    height: 174px;
+    margin-left: 43px;
+    padding-left: 18px;
+    padding-top: 9px;
+    padding-right: 18px;
+    padding-bottom: 13px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .comments {
+    margin-bottom: 64px;
+  }
+
+  .comments__title {
+    margin-bottom: 77px;
+    margin-left: 0;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: -80px;
+      width: 40px;
+      height: 3px;
+      background: @bg-green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      right: -1147px;
+      width: 1112px;
+      height: 3px;
+      background: @bg-green;
+    }
+  }
+
+  .comments__content {
+    width: 1220px;
+    margin-left: 0;
+  }
 }
