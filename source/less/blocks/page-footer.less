@@ -8,12 +8,29 @@
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 40px;
   padding-bottom: 20px;
   text-align: center;
   width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
+  background-color: @bg-gray;
+}
+
+.page-footer__logo-link {
+  margin-top: 33px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background: @mobile-categories-lines;
+  }
 }
 
 .page-footer__logo-link:hover,
@@ -31,13 +48,22 @@
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 60px;
     width: 768px;
   }
 
   .page-footer__social {
-    margin-top: 10px;
+    margin-top: 6px;
+    margin-left: 22px;
+  }
+
+  .page-footer__logo-link {
+    margin-top: 5px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

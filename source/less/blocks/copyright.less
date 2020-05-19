@@ -6,6 +6,8 @@
 .copyright__text {
   font-size: 16px;
   line-height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 8px;
 }
 
 .copyright__text:active {
@@ -19,4 +21,10 @@
 
 .copyright__link:active svg {
   fill: @pale-green;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    margin-right: 22px;
+  }
 }

@@ -1,0 +1,262 @@
+.extra-goods {
+  width: 100%;
+}
+
+.extra-goods__wrapper {
+  padding: 0 20px 40px;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.extra-goods__title {
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 30px 0;
+  text-align: left;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background: @mobile-extra-goods-border;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    right: -20px;
+    width: 53px;
+    height: 3px;
+    background: @bg-green;
+  }
+}
+
+
+.extra-goods__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.extra-goods__item {
+  position: relative;
+  padding: 15px 0;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background: @mobile-extra-goods-border;
+  }
+}
+
+.extra-goods__name {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.extra-goods__table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+}
+
+.extra-goods__value {
+  width: 50px;
+  margin: 0;
+  position: absolute;
+  text-align: right;
+  left: 230px;
+  top: 0;
+}
+
+.extra-goods__order {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-goods__wrapper {
+    padding: 0 30px;
+    width: 768px;
+  }
+
+  .extra-goods__title {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    margin-top: 49px;
+    margin-bottom: 80px;
+    margin-left: 38px;
+    text-align: left;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: -67px;
+      width: 28px;
+      height: 3px;
+      background: @bg-green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      right: -30px;
+      width: 327px;
+      height: 3px;
+      background: @bg-green;
+    }
+  }
+
+  .extra-goods__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 38px;
+    padding-right: 37px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    border: 1px solid @mobile-categories-lines;
+    border-bottom: transparent;
+
+    &:last-child {
+      border-bottom: 1px solid @mobile-categories-lines;
+      margin-bottom: 70px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .extra-goods__name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+
+  .extra-goods__table {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 93px;
+    margin-bottom: 9px;
+    margin-top: 2px;
+  }
+
+  .extra-goods__value {
+    left: unset;
+    right: -94px;
+  }
+}
+
+@media (min-width: @desktop-width)  {
+  .extra-goods  {
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+  }
+
+  .extra-goods__wrapper {
+    padding: 0;
+    margin: 0;
+    width: 895px;
+    margin-left: 40px;
+  }
+
+  .extra-goods__title {
+    position: relative;
+    margin-top: 56px;
+    margin-bottom: 80px;
+    margin-left: 0px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: -110px;
+      width: 70px;
+      height: 3px;
+      background: @bg-green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: 375px;
+      width: 958px;
+      height: 3px;
+      background: @bg-green;
+    }
+  }
+
+  .extra-goods__item  {
+    justify-content: start;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
+    padding-top: 15px;
+    padding-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 86px;
+    }
+  }
+
+  .extra-goods__name {
+    display: block;
+    width: 325px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+
+  .extra-goods__table {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 14px;
+  }
+
+  .extra-goods__value {
+    left: 245px;
+    right: unset;
+    text-align: left;
+  }
+
+  .extra-goods__order {
+    width: 245px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
