@@ -101,6 +101,13 @@
     width: 320px;
     height: 240px;
     background: url("../img/after-mobile@1x.png") no-repeat top center @bg-gray;
+
+    @media
+    (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background: url("../img/after-mobile@2x.png") no-repeat top center @bg-gray;
+      background-size: 320px auto;
+    }
   }
 }
 
@@ -251,6 +258,13 @@
       width: 325px;
       height: 495px;
       background: url("../img/after-tablet@1x.png") no-repeat top center transparent;
+
+      @media
+      (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+        background: url("../img/after-tablet@2x.png") no-repeat top center transparent;
+        background-size: 768px auto;
+      }
     }
   }
 
@@ -382,10 +396,17 @@
 
       position: absolute;
       top: -65px;
-      left: -55px;
+      left: 29px;
       width: 470px;
       height: 485px;
       background: url("../img/after-desktop@1x.png") no-repeat top center transparent;
+
+      @media
+      (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+        background: url("../img/after-desktop@2x.png") no-repeat top center transparent;
+        background-size: 690px auto;
+      }
     }
   }
 

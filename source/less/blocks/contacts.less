@@ -94,6 +94,13 @@
     height: 400px;
     background: url("../img/bg-map-tablet@1x.png") no-repeat center;
 
+    @media
+    (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background: url("../img/bg-map-tablet@2x.png") no-repeat center;
+      background-size: 768px auto;
+    }
+
     & img {
       display: none;
     }
@@ -115,6 +122,13 @@
   .contacts__map {
     width: 1300px;
     background: url("../img/bg-map-desktop@1x.png") no-repeat center;
+
+    @media
+    (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background: url("../img/bg-map-desktop@2x.png") no-repeat center;
+      background-size: 1440px auto;
+    }
   }
 
   .contacts__info {
