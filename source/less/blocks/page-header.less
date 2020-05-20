@@ -40,6 +40,13 @@
   .page-header {
     &--inverted {
     background: url("../img/index-background-desktop@1x.jpg") no-repeat top -48px left 112%;
+
+    @media
+    (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat top -48px left 112%;
+      background-size: 720px auto;
+    }
     }
   }
 
