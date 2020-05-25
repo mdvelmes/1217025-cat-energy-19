@@ -102,7 +102,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #000000;
+  color: @font-color;
   text-decoration: none;
 
   &::after {
@@ -192,9 +192,15 @@
   .categoties__description {
     font-size: 16px;
     line-height: 24px;
-    width: 375px;
     margin-bottom: 55px;
 
+    &--slim {
+      width: 375px;
+    }
+
+    &--gain {
+      width: 340px;
+    }
 
     &::after {
       display: none;
