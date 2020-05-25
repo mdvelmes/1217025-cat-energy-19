@@ -1,5 +1,6 @@
 .example {
   width: 100%;
+  background-color: @bg-gray;
 }
 
 .example__wrapper {
@@ -128,6 +129,10 @@
   margin-left: 10px;
 }
 
+.example__after-text {
+  margin-left: 0;
+}
+
 .example__checkbox[type="checkbox"] {
   display: none;
 }
@@ -164,9 +169,15 @@
 }
 
 @media (min-width: @tablet-width) {
+
+  .example {
+    background-color: @white;
+  }
+
   .example__wrapper {
     padding: 0 30px;
     width: 768px;
+    background-color: @white;
   }
 
   .example__title {
@@ -185,6 +196,7 @@
   .example__block-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 52px;
   }
 
   .example__block {
@@ -219,6 +231,7 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 8px;
     padding-right: 8px;
+    background-color: @white;
 
     &--weight {
       left: 23px;
@@ -244,28 +257,51 @@
     text-align: right;
   }
 
+  .example__picture-container {
+    background: linear-gradient(to bottom, @white 27%, @bg-gray 27%, @bg-gray 100%);;
+  }
+
   .example__picture {
     position: relative;
     text-align: center;
-    min-height: 520px;
+    min-height: 500px;
 
     &::before {
       content: "";
 
       position: absolute;
       top: 0px;
-      left: 185px;
-      width: 325px;
-      height: 495px;
-      background: url("../img/after-tablet@1x.png") no-repeat top center transparent;
+      left: 356px;
+      width: 315px;
+      height: 513px;
+      background: url("../img/after-tablet@1x.png") no-repeat right transparent;
+      z-index: 5;
 
       @media
       (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
-        background: url("../img/after-tablet@2x.png") no-repeat top center transparent;
-        background-size: 768px auto;
+        background: url("../img/after-tablet@2x.png") no-repeat right transparent;
+        background-size: 610px 510px;
       }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 357px;
+      width: 354px;
+      height: 630px;
+      background: linear-gradient(to bottom, @white 27%, @bg-after-side 27%, @bg-after-side 100%);
+      z-index: 4;
+    }
+  }
+
+  .example__picture-img {
+    position: absolute;
+    width: 689px;
+    height: 518px;
+    left: 17px;
   }
 
   .example__mobile-slider {
@@ -283,7 +319,8 @@
     height: 6px;
     background-color: @scale-color;
     border-radius: 2px;
-    margin-top: 36px;
+    margin-top: 45px;
+    z-index: 6;
   }
 
   .example__before-scale,
@@ -291,33 +328,60 @@
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    text-decoration: underline  dotted @dotted-underline;
-    margin-top: 29px;
+    text-decoration: none;
+    margin-top: 36px;
     margin-bottom: 74px;
     color: @black;
+    z-index: 6;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      height: 1px;
+      bottom: -6px;
+      left: 0;
+      background-image: linear-gradient(to right, @dotted-underline 50%, transparent 50%);
+      background-repeat: repeat-x;
+      background-size: 2px 1px;
+    }
 
     &:hover {
-      text-decoration: underline  solid  @solid-underline;
+      &::after {
+        background: @solid-underline;
+      }
     }
 
     &:active {
-      text-decoration: none;
+      &::after {
+        background: transparent;
+      }
     }
   }
 
   .example__before-scale {
     margin-left: 69px;
     margin-right: 25px;
+    position: relative;
+
+    &::after {
+      width: 45px;
+    }
   }
 
   .example__after-scale {
     margin-left: 17px;
+    position: relative;
+
+    &::after {
+      width: 49px;
+    }
   }
 
   .example__range-toogle {
     position: absolute;
-    top: 23px;
-    left: 338px;
+    top: 31px;
+    left: 340px;
     width: 8px;
     height: 8px;
     background: @bg-green;
@@ -325,6 +389,21 @@
     border-radius: 50%;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     cursor: pointer;
+    z-index: 6;
+
+    &::before {
+      position: absolute;
+
+      content: "";
+      top: -12px;
+      left: -13px;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: 2px solid @bg-green;
+      border-radius: 50%;
+      display: none;
+    }
 
     &:hover {
       box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.35);
@@ -332,7 +411,11 @@
 
     &:active {
       box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-      outline: 2px solid @bg-green;
+
+      &::before {
+        display: block;
+      }
+
     }
   }
 }
@@ -350,11 +433,25 @@
 
   .example__container {
     margin-right: 217px;
+    z-index: 3;
   }
 
   .example__title {
     margin-top: 0;
     margin-bottom: 145px;
+    position: relative;
+    z-index: 0;
+
+    &::after {
+      content: "";
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 462px;
+      background-color: #f2f2f2;
+      top: 135px;
+      left: -20%;
+    }
   }
 
   .example__description {
@@ -366,6 +463,10 @@
   .example__block {
     margin-top: 67px;
     margin-bottom: 55px;
+  }
+
+  .example__value-text {
+    background-color: @bg-gray;
   }
 
   .example__costs {
@@ -385,38 +486,62 @@
     margin-bottom: 70px;
   }
 
+  .example__picture-container {
+    background: @bg-gray;
+  }
+
   .example__picture {
     position: relative;
     text-align: center;
+    width: 714px;
     min-height: 490px;
-    margin-top: -197px;
+    margin-top: -255px;
 
     &::before {
       content: "";
-
       position: absolute;
-      top: -65px;
-      left: 29px;
-      width: 470px;
-      height: 485px;
-      background: url("../img/after-desktop@1x.png") no-repeat top center transparent;
+      top: -3px;
+      z-index: 6;
+      left: 283px;
+      width: 323px;
+      height: 510px;
+      background: url("../img/after-desktop@1x.png") no-repeat right transparent;
 
       @media
       (min-resolution: @retina-dpi),
       (min-resolution: @retina-dppx) {
-        background: url("../img/after-desktop@2x.png") no-repeat top center transparent;
-        background-size: 690px auto;
+        background: url("../img/after-desktop@2x.png") no-repeat right transparent;
+        background-size: 685px 510px;
       }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 285px;
+      width: 100%;
+      height: 636px;
+      background: linear-gradient(to bottom, @white 28%, @bg-after-side 28%, @bg-after-side 100%);
+      z-index: 4;
     }
   }
 
+  .example__picture-img {
+    position: absolute;
+    width: 689px;
+    height: 511px;
+    left: 17px;
+    margin-left: -100px;
+}
+
   .example__scale {
-    margin-top: 10px;
+    margin-top: 70px;
   }
 
   .example__before-scale,
   .example__after-scale {
-    margin-top: 0;
+    margin-top: 63px;
     margin-bottom: 0;
   }
 
@@ -431,7 +556,7 @@
 
   .example__range-toogle {
     position: absolute;
-    top: -3px;
+    top: 57px;
     left: 269px;
   }
 }

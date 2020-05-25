@@ -14,6 +14,10 @@
   opacity: 0.3;
 }
 
+.copyright__link svg {
+  fill: @fill-icon-color;
+}
+
 .copyright__link:hover svg,
 .copyright__link:focus svg {
   fill: @bg-green;
@@ -26,5 +30,10 @@
 @media (min-width: @tablet-width) {
   .copyright__text {
     margin-right: 22px;
+  }
+
+  .copyright__link svg {
+    width: 28px;
+    height: 35px;
   }
 }

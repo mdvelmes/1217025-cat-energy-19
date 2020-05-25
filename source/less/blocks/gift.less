@@ -28,6 +28,17 @@
   padding-top: 185px;
   padding-bottom: 40px;
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 64px;
+    left: 54px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat top center;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -52,6 +63,16 @@
     padding-top: 72px;
     padding-bottom: 72px;
     padding-left: 312px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 64px;
+      left: -25px;
+      width: 60px;
+      height: 60px;
+      background: url(../img/icon-gift.svg) no-repeat top center;
+    }
   }
 }
 
@@ -87,5 +108,15 @@
     padding-bottom: 43px;
     padding-left: 0;
     margin: 0 auto;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 63px;
+      left: 55px;
+      width: 60px;
+      height: 60px;
+      background: url(../img/icon-gift.svg) no-repeat top center;
+    }
   }
 }
