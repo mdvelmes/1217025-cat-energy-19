@@ -46,6 +46,7 @@
     "node": "8.16"
   },
   "dependencies": {
+    "del": "5.1.x",
     "normalize.less": "^1.0.0"
   }
 }
